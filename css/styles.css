@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
   }
   :root {
     --primary-text-color: #353131;
@@ -29,14 +30,12 @@
     overflow: hidden;
     border: 0;
     clip: rect(0 0 0 0);
-  
   }
-  .list-item {
-    list-style: none;
-  }
-  
+  /* РАСКОММЕНТИРОВАТЬ НА ФИНИШЕ!!!!!!! */
   .container-bcg {
-    background-image: url("/images/background_frames_logo.jpg");
+    /* margin-left: auto;
+    margin-right: auto; */
+    background-image: url("/images/background.jpg");
     background-size: 1240px 1754px;
     background-repeat: no-repeat;
     background-position: center top;
@@ -79,8 +78,9 @@
     background-attachment: scroll;
     width: 320px;
     height: 100px;
-    margin-top: 112px;
+    margin-top: 108px;
     margin-left: 28px;
+    margin-right: 8px;
   }
   .character-name .value {
     padding: 24px 40px 36px 40px;
@@ -100,24 +100,65 @@
     color: var(--title-text-color);
   }
   .character-block {
+    background-image: url("/images/characer_block_frame.png");
+    background-repeat: no-repeat;
+    background-size: 856px 224px;
     display: flex;
-    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    width: 856px;
+    height: 224px;
+    /* padding-top: 12px; */
+
   }
-  .character-block .list-item {
+  .character-block .value {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     width: 264px;
     height: 40px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
   }
-  
+  .ch-class-title, .ch-background-title,
+  .ch-player-title, .ch-race-title, 
+  .ch-alignment-title, .ch-experience-title {
+    margin-top: 8px;
+  }
   /* СЕКЦИЯ ХАРАКТЕРИСТИК */
   
   /* Заголовки характеристик */
-  .characteristics-strength-title, 
-  .charactericstics-title, 
-  .charactericstics-title,
-  .charactericstics-title,
-  .charactericstics-title,
+  .characteristics {
+    background-image:url("/images/characteristics_frame.png");
+    background-size: 168px 1040px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 208px;
+    width: 168px;
+    height: 1040px;
+  }
+  .characteristics-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+  .characteristics .list-item {
+    background-image: url("/images/character_list_item_frame.png");
+    background-repeat: no-repeat;
+    background-size: 148px 140px;
+    width: 148px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
   .charactericstics-title {
     font-size: 14px;
     line-height: 1.15;
@@ -125,6 +166,7 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     color: var(--green-text-color);
+    /* margin-top: 28px; */
   }
   /* Модификаторы характеристик */
   .characteristics-modifier {
@@ -132,19 +174,65 @@
     font-style: italic;
     font-size: 20px;
     line-height: 1.2;
-    text-align: center;
+    width: 80px;
+    height: 40px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
   /* Итоговое значение характеристик*/
   .characteristics .value {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-size: 20px;
-    line-height: 1.25;
-    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+    /* text-align: center; */
     color: var(--green-text-color);
-  
+    width: 48px;
+    height: 36px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
+
   /* СЕКЦИЯ ВДОХНОВЕНИЕ И БОНУС МАСТЕРСТВА */
+  .inspiration-proficiency-bonus{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    margin-top: 216px;
+    margin-left: 218px;
+  }
+  .inspiration{
+    background-image: url("/images/inspiration_frame.png");
+    background-repeat: no-repeat;
+    background-size: 280px 80px;
+    width: 280px;
+    height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    align-items: center;
+    gap: 48px;
+  }
+  .proficiency-bonus{
+    background-image: url("/images/inspiration_frame.png");
+    background-repeat: no-repeat;
+    background-size: 280px 80px;
+    width: 280px;
+    height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    align-items: center;
+  }
   .inspiration-title, .proficiency-bonus-tittle {
     font-family: 'Raleway', sans-serif;
     line-height: 1.13;
@@ -152,13 +240,17 @@
     text-align: center;
     color: var(--green-text-color);
   }
-  .inspiration-bonus .value,
+  .inspiration .value,
   .proficiency-bonus .value {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
+    width: 48px;
+    height: 32px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
   }
   
   /* ПАРАМЕТРЫ: КД, Инициаттива, Скорость, Пасивная внимательность  */

@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
   }
   :root {
     --primary-text-color: #353131;
@@ -31,12 +32,9 @@
     clip: rect(0 0 0 0);
   
   }
-  .list-item {
-    list-style: none;
-  }
   
   .container-bcg {
-    background-image: url("/images/background_frames_logo.jpg");
+    background-image: url("/images/background.jpg");
     background-size: 1240px 1754px;
     background-repeat: no-repeat;
     background-position: center top;
@@ -101,13 +99,18 @@
     color: var(--title-text-color);
   }
   .character-block {
+    background-image: url("/images/characer_block_frame.png");
+    background-repeat: no-repeat;
+    background-size: 856px 224px;
+    margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
     width: 856px;
     height: 224px;
-    padding-top: 12px;
+    /* padding-top: 12px; */
+
   }
   .character-block .value {
     display: flex;
@@ -127,11 +130,37 @@
   /* СЕКЦИЯ ХАРАКТЕРИСТИК */
   
   /* Заголовки характеристик */
-  .characteristics-strength-title, 
-  .charactericstics-title, 
-  .charactericstics-title,
-  .charactericstics-title,
-  .charactericstics-title,
+  .characteristics {
+    background-image:url("/images/characteristics_frame.png");
+    background-size: 168px 1040px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 208px;
+    width: 168px;
+    height: 1040px;
+  }
+  .characteristics-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+  .characteristics .list-item {
+    background-image: url("/images/character_list_item_frame.png");
+    background-repeat: no-repeat;
+    background-size: 148px 140px;
+    width: 148px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+
   .charactericstics-title {
     font-size: 14px;
     line-height: 1.15;
@@ -139,6 +168,7 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     color: var(--green-text-color);
+    /* margin-top: 28px; */
   }
   /* Модификаторы характеристик */
   .characteristics-modifier {
@@ -146,30 +176,32 @@
     font-style: italic;
     font-size: 20px;
     line-height: 1.2;
-    text-align: center;
+    width: 80px;
+    height: 40px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
   /* Итоговое значение характеристик*/
   .characteristics .value {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-size: 20px;
-    line-height: 1.25;
-    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+    /* text-align: center; */
     color: var(--green-text-color);
-  }
-
-  .characteristics {
+    width: 48px;
+    height: 36px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /* margin-left: 28px;
-    margin-top: 8px; */
-    width: 168px;
-    height: 1040px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
-  /* .characteristics .list-item {
-
-  } */
 
 
   /* СЕКЦИЯ ВДОХНОВЕНИЕ И БОНУС МАСТЕРСТВА */

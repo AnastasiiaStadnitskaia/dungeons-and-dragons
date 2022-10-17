@@ -1,59 +1,77 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  :root {
-    --primary-text-color: #353131;
-    --title-text-color: #150101;
-    --green-text-color: #01220A;
-    /* Fonts */
-    --font-family: 'Roboto Flex', sans-serif;
-    --font-size: 16px;
-  }
-  
-  body {
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    color: var(--primary-text-color);
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-text-color: #353131;
+  --title-text-color: #150101;
+  --green-text-color: #01220a;
+  /* Fonts */
+  --font-family: "Roboto Flex", sans-serif;
+  --font-size: 16px;
+}
 
-    /* position: relative; */
-  }
-  /* Свойство для скрытия заголовка без резервации места */
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0px; 
-    overflow: hidden;
-    border: 0;
-    clip: rect(0 0 0 0);
-  }
-  /* РАСКОММЕНТИРОВАТЬ НА ФИНИШЕ!!!!!!! */
-  .container-bcg {
-    margin-left: auto;
-    margin-right: auto;
-    background-image: url("/images/background.jpg");
-    background-size: 1240px 1754px;
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: var(--primary-text-color);
+  box-sizing: border-box;
+
+  /* position: relative; */
+}
+/* Свойство для скрытия заголовка без резервации места */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+/* РАСКОММЕНТИРОВАТЬ НА ФИНИШЕ!!!!!!! */
+.container-bcg {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("/img/background.jpg");
+  background-size: 1240px 1754px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: scroll;
+  width: 1240px;
+  height: 1754px;
+}
+
+/* HERO - Персонаж */
+  /* Имя персонажа */
+  .character-name {
+    background-image: url("/img/svitok.png");
+    background-size: 320px 100px;
     background-repeat: no-repeat;
-    background-position: center top;
     background-attachment: scroll;
-    width: 1240px;
-    height: 1754px;
+    width: 320px;
+    height: 100px;
+    margin-top: 128px;
+    margin-left: 24px;
+    margin-right: 5px;
   }
-  
-  /* HERO - Персонаж */
-  /* Введенные данные персонажа */
+  /* Заголовок - "Имя персонажа" */
+  .character {
+    display: flex;
+    flex-direction: row;
+  }
   .character-name .value,
   .character-block .value {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-style: italic;
     font-size: 20px;
@@ -61,50 +79,20 @@
     text-align: center;
     color: var(--title-text-color);
   }
-  /* Заголовок - "Имя персонажа" */
-  .character {
-    display: flex;
-    flex-direction: row;
-  }
-  
   .character-name .ch-name {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     line-height: 1;
     text-align: center;
     letter-spacing: 0.1em;
     color: var(--title-text-color);
   }
-  .character-name {
-    background-image: url("/images/svitok.png");
-    background-size: 320px 100px;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    width: 320px;
-    height: 100px;
-    margin-top: 108px;
-    margin-left: 28px;
-    margin-right: 8px;
-  }
   .character-name .value {
     padding: 24px 40px 36px 40px;
   }
-  
-  /* Заголовки блока персонажа */
-  .character-block .character-class,
-  .character-block .character-level,
-  .character-block .character-background,
-  .character-block .character-player,
-  .character-block .character-race,
-  .character-block .character-alignment,
-  .character-block .character-experience {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1;
-    text-align: center;
-    color: var(--title-text-color);
-  }
+  /* Блок - данные персонажа */
   .character-block {
-    background-image: url("/images/characer_block_frame.png");
+    background-image: url("/img/character-block.svg");
     background-repeat: no-repeat;
     background-size: 856px 224px;
     display: flex;
@@ -113,8 +101,6 @@
     align-content: space-evenly;
     width: 856px;
     height: 224px;
-    /* padding-top: 12px; */
-
   }
   .character-block .value {
     display: flex;
@@ -126,35 +112,62 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
   }
-  .ch-class-title, .ch-background-title,
-  .ch-player-title, .ch-race-title, 
-  .ch-alignment-title, .ch-experience-title {
+  /* Заголовки блока персонажа */
+  .character-block .character-class,
+  .character-block .character-level,
+  .character-block .character-background,
+  .character-block .character-player,
+  .character-block .character-race,
+  .character-block .character-alignment,
+  .character-block .character-experience {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    text-align: center;
+    color: var(--title-text-color);
+  }
+  .ch-class-title,
+  .ch-background-title,
+  .ch-player-title,
+  .ch-race-title,
+  .ch-alignment-title,
+  .ch-experience-title {
     margin-top: 8px;
   }
-  /* СЕКЦИЯ ХАРАКТЕРИСТИК */
-  
+/* Большой блок из 3 частей */
+  .box-main {
+    box-sizing: border-box;
+    width: 1180px;
+    height: 1036px;
+    margin-top: 6px;
+    margin-left: 24px;
+    display: flex;
+  }
+/* СЕКЦИЯ ХАРАКТЕРИСТИК */
   /* Заголовки характеристик */
   .characteristics {
-    background-image:url("/images/characteristics_frame.png");
-    background-size: 168px 1040px;
+    background-image: url("/img/characteristics-frame.svg");
+    background-size: 168px 1030px;
     background-repeat: no-repeat;
-    top: 208px;
-    margin-left: 28px;
+    /* top: 208px; */
     width: 168px;
-    height: 1040px;
+    height: 1030px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 24px;
+    margin-top: 6px;
   }
-  .characteristics-list{
+  .characteristics-list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding-top: 48px;
-}
+    gap: 16px;
+  }
   .characteristics .list-item {
-    background-image: url("/images/character_list_item_frame.png");
+    background-image: url("/img/characteristic-frame.svg");
     background-repeat: no-repeat;
-    background-size: 148px 140px;
-    width: 148px;
+    background-size: 144px 140px;
+    width: 144px;
     height: 140px;
     display: flex;
     flex-direction: column;
@@ -173,7 +186,7 @@
   }
   /* Модификаторы характеристик */
   .characteristics-modifier {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 1.2;
@@ -188,11 +201,10 @@
   }
   /* Итоговое значение характеристик*/
   .characteristics .value {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
     font-size: 18px;
     line-height: 1.2;
-    /* text-align: center; */
     color: var(--green-text-color);
     width: 48px;
     height: 36px;
@@ -204,58 +216,65 @@
     align-items: center;
   }
 
-  /* СЕКЦИЯ ВДОХНОВЕНИЕ И БОНУС МАСТЕРСТВА */
-  .inspiration-proficiency-bonus{
+/* Секция - Вдохновение и Бонус мастерства */
+  .box-first {
     display: flex;
     flex-direction: column;
+    margin-right: 16px;
+    justify-content: center;
     gap: 16px;
   }
-  .inspiration{
-    background-image: url("/images/inspiration_frame.png");
+  .inspiration-proficiency-bonus{
+    box-sizing: border-box;
+    width: 280px;
+    height: 180px;
+  }
+  .inspiration {
+    background-image: url("/img/inspiration-frame.svg");
     background-repeat: no-repeat;
     background-size: 280px 80px;
     width: 280px;
     height: 80px;
     display: flex;
     flex-direction: row-reverse;
-    /* position: relative; */
     align-items: center;
     gap: 48px;
-    padding-left: 12px;
+    margin-bottom: 20px;
     justify-content: flex-end;
   }
-  .proficiency-bonus{
-    background-image: url("/images/inspiration_frame.png");
+  .proficiency-bonus {
+    background-image: url("/img/inspiration-frame.svg");
     background-repeat: no-repeat;
     background-size: 280px 80px;
     width: 280px;
     height: 80px;
     display: flex;
     flex-direction: row-reverse;
-    /* position: relative; */
     align-items: center;
-    gap: 32px;
-    padding-left: 12px;
+    gap: 24px;
+    margin-bottom: 12px;
     justify-content: flex-end;
   }
-  .inspiration-title{
+  .inspiration-title {
     width: 125px;
     height: 18px;
   }
-  .proficiency-bonus-tittle{
+  .proficiency-bonus-tittle {
     width: 168px;
     height: 18px;
   }
-  .inspiration-title, .proficiency-bonus-tittle {
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.13;
+  .inspiration-title,
+  .proficiency-bonus-tittle {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.12;
     text-decoration-line: underline;
     text-align: center;
     color: var(--green-text-color);
+    /* font-size: 16px; */
   }
   .inspiration .value,
   .proficiency-bonus .value {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 1.2;
@@ -265,39 +284,453 @@
     background: rgba(217, 217, 217, 0.25);
     border-radius: 4px;
   }
-  .box-main{
-    display: flex;
-  }
+    /* Секция Спасброски */
+    .saving-throws-title,
+    .skills-title {
+      font-size: 14px;
+      line-height: 1.14;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+    }
+    .saving-strength-title,
+    .saving-dexterity-title,
+    .saving-constitution-title,
+    .saving-intelligence-title,
+    .saving-wisdom-title,
+    .saving-charisma-title {
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      line-height: 1.25;
+      color: var(--green-text-color);
+    }
+    .saving-throws .value {
+      background: rgba(217, 217, 217, 0.25);
+      border-bottom: 1px solid #000000;
+      border-radius: 4px;
+      font-family: "Montserrat", sans-serif;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 1.2;
+      text-align: center;
+      margin-right: 16px;
+    }
+    /* Рамка - Спасброски */
+    .saving-throws {
+      box-sizing: border-box;
+      background-image: url("/img/saving-throws-frame.svg");
+      background-repeat: no-repeat;
+      background-size: 280px 264px;
+      width: 280px;
+      height: 264px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 12px;
+      /* margin-bottom: 20px; */
+      align-content: center;
+    }
+    .saving-throws-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .saving-throws .list-item {
+      width: 242px;
+      height: 24px;
+      display: flex;
+      flex-direction: row;
+    }
+    .marker-big {
+      margin-right: 4px;
+    }
   
-  /* ПАРАМЕТРЫ: КД, Инициаттива, Скорость, Пасивная внимательность  */
+  /* Секция Навыки - рамка */
+  .skills {
+    box-sizing: border-box;
+    background-image: url("/img/skills-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 280px 554px;
+    width: 280px;
+    height: 554px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px 8px 12px 12px;
+  }
+  .skills-title {
+    order: 1;
+  }
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .skills-list .list-item {
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    height: 20px;
+  }
+  .skills-list .value {
+    margin-left: 4px;
+    margin-right: 12px;
+    background: rgba(217, 217, 217, 0.25);
+    border-bottom: 1px solid #000000;
+    border-radius: 4px;
+    width: 40px;
+    height: 16px;
+    text-align: center;
+  }
+  .skills-acrobatics-title, .skills-investigation-title,
+  .skills-athletics-title, .skills-perception-title,
+  .skills-survival-title, .skills-perfomance-title,
+  .skills-intimidation-title, .skills-history-title,
+  .skills-sleight-title, .skills-arcana-title,
+  .skills-medicine-title, .skills-deception-title,
+  .skills-nature-title, .skills-insight-title,
+  .skills-religion-title, .skills-stealth-title,
+  .skills-persuassion-title, .skills-animal-title {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.17;
+    text-decoration-line: underline;
+    color: var(--green-text-color);
+  }
+
+/* БЛОК 2 - ПАРАМЕТРЫ + АТАКИ И ЗАКЛИНАНИЯ + ПРОЧИЕ ВЛАДЕНИЯ И ЯЗЫКИ */
+  .box-second {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 344px;
+    margin-right: 10px;
+    padding: 6px;
+  }
+  /* Рамка - КД */
+  .parameter-armor {
+    background-image: url("/img/parameter-armor-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 140px 120px;
+    width: 140px;
+    height: 120px;
+  }
+  .parameter-list {
+    width: 344px;
+    height: 236px;;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .parameter-list .list-item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .parameter-list .value {
+    width: 80px;
+    height: 40px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+  }
+  .parameter-armor .value,
+  .parameter-speed .value{
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  /* Рамка - Инициатива */
+  .parameter-initiative {
+    background-image: url("/img/parameter-initiative-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 188px 120px;
+    width: 188px;
+    height: 120px;
+  }
+  .parameter-initiative .value{
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+  /* Рамка - Скорость */
+  .parameter-speed {
+    background-image: url("/img/parameter-speed-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 140px 100px;
+    width: 140px;
+    height: 100px;
+    /* padding-top: 24px; */
+  }
+  .parameter-speed .value{
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  /* Рамка -Пассивная внимательность */
+  .passive-perception {
+    background-image: url("/img/passive-perception-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 188px 100px;
+    width: 188px;
+    height: 100px;
+  }
+  .passive-perception .value {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  /* Шрифт: КД, Инициаттива, Скорость, Пасивная внимательность - шрифты */
   .parameter-armor-title,
   .parameter-initiative-title,
-  .parameter-speed-title, 
-  .passive-perception-title, 
-  .saving-throws-title, .skills-title {
+  .parameter-speed-title,
+  .passive-perception-title,
+  .saving-throws-title,
+  .skills-title {
     font-size: 14px;
     line-height: 1.15;
     text-align: center;
     text-decoration-line: underline;
   }
-  .parameter .value, .saving-throws .value {
-    font-family: 'Montserrat', sans-serif;
+  .parameter .value,
+  .saving-throws .value {
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
     font-size: 20px;
     line-height: 1.2;
     text-align: center;
   }
+  /* Рамка - Атаки и заклинания */
+  .attack {
+    box-sizing: border-box;
+    background-image: url("/img/attack-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 344px 294px;
+    width: 344px;
+    height: 294px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 18px 12px 18px;
+  }
+  .attack .value {
+    width: 308px;
+    height: 240px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+  }
+  /* Рамка - Прочие владения и языки */
+  .proficiencies {
+    box-sizing: border-box;
+    background-image: url("/img/proficiencies-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 344px 468px;
+    width: 344px;
+    height: 468px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 22px 8px 22px;
+  }
+  .attack-title,
+  .features-title,
+  .proficiencies-title {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.13;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .proficiencies .value-list {
+    width: 312px;
+    height: 420px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+  }
+  .attack .value,
+  .features .value,
+  .proficiencies .value {
+    letter-spacing: 0.1em;
+  }
   
-  .hp-max-title, .hp-current-title, 
-  .hp-temporary-title, .success, .failure {
-    font-family: 'Roboto', sans-serif;
+/* БЛОК 3 - ХИТЫ + УМЕНИЯ И СПОСБНОСТИ */
+  .box-third{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 338px;
+    height: 1036px;
+  }
+  /* Рамка - блок Хиты и Спасброски */
+  .hp-container{
+    background-image: url("/img/hp-container-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 338px 248px;
+    width: 338px;
+    height: 248px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    /* margin-bottom: 18px; */
+  }
+  /* Рамка - Макисмум и текущие хиты */
+  .parameter-hp{
+    background-image: url("/img/parameter-hp-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 150px 120px;
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12px;
+  }
+  /* Максимум хитов */
+  .hp-max{
+    width: 118px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+  }
+  .hp-max .value, .hp-hd .total-value{
+    width: 40px;
+    height: 20px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+    margin-bottom: 12px;
+    padding-top: 4px;
+  }
+  /* Текущие хиты */
+  .hp-current, .hp-dice{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4px;
+  }
+  .hp-current .value,
+  .hp-dice .value{
+    width: 60px;
+    height: 40px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Рамка - Кость хитов */
+  .hit-dice{
+    background-image: url("/img/hp-hd-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 150px 120px;
+    width: 150px;
+    height: 120px;
+  }
+  .hp-hd{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 28px;
+    padding-top: 12px;
+    margin-bottom: 4px;
+  }
+  /* Рамка - Временные хиты */
+  .hp-temporary{
+    box-sizing: border-box;
+    background-image: url("/img/hp-temporary-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 150px 100px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 16px; */
+  }
+  .hp-temporary .value{
+    width: 80px;
+    height: 40px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  /* Рамка - Спасброски: успехи и провалы */
+  .hp-ds{
+    box-sizing: border-box;
+    background-image: url("/img/hp-ds-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 150px 100px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .success-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  /* ..success-list{
+    gap: 8px;
+  } */
+  .success-markers, .failure-markers{
+    width: 68px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+  .failure-list{
+    box-sizing: border-box;
+    width: 128px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* padding-left: 11px; */
+    margin-bottom: 6px;
+  }
+
+  /* Рамка - Умения и способности */
+  .features{
+    background-image: url("/img/features-frame.svg");
+    background-repeat: no-repeat;
+    background-size: 338px 778px;
+    width: 338px;
+    height: 778px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+    box-sizing: border-box;
+  }
+  .hp-max-title,
+  .hp-current-title,
+  .hp-temporary-title,
+  .success,
+  .failure {
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     text-align: center;
     color: var(--green-text-color);
   }
-  .hp-max .value, .hp-hd .hd-total, .hp-hd .total-value {
+  .hp-max .value,
+  .hp-hd .hd-total,
+  .hp-hd .total-value {
     font-style: italic;
     font-weight: 700;
     font-size: 14px;
@@ -307,87 +740,45 @@
     color: var(--green-text-color);
   }
   /* Заголовки - Кость хитов и Спасброски */
-  .hp-hd-title, .hp-ds-title {
+  .hp-hd-title,
+  .hp-ds-title {
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
     text-decoration-line: underline;
     color: var(--green-text-color);
   }
-  
-  .saving-throws-title, .skills-title {
-    font-size: 14px;
-    line-height: 1.14;
-    text-decoration-line: underline;
-    text-transform: uppercase;
+  .features .value-list{
+    width: 308px;
+    height: 734px;
+    background: rgba(217, 217, 217, 0.25);
+    border-radius: 4px;
   }
-  
-  .saving-strength-title, .saving-dexterity-title,
-  .saving-constitution-title, .saving-intelligence-title,
-  .saving-wisdom-title, .aving-charisma-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 1.25;
-    color: var(--green-text-color);
-  }
-  .saving-throws .value {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: center;
-  }
-  /* .saving-throws .list-item {
-    list-style-image: url("/images/circle-small.png");
-    width: 24px;
-    height: 24px;
-  } */
-  
-  .skills-acrobatics-title, .skills-investigation-title,
-  .skills-athletics-title, .skills-perception-title,
-  .skills-survival-title, .skills-perfomance-title,
-  .skills-intimidation-title, .skills-history-title, 
-  .skills-sleight-title, .skills-arcana-title, 
-  .skills-medicine-title, .skills-deception-title,
-  .skills-nature-title, .skills-insight-title,
-  .skills-religion-title, .skills-stealth-title,
-  .skills-persuassion-title, .skills-animal-title {
-    font-style: italic;
-    font-size: 14px;
-    line-height: 1.14;
-    text-decoration-line: underline;
-    color: var(--green-text-color);
-  }
-  
-  .attack-title, .features-title, .proficiencies-title {
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.13;
-    text-decoration-line: underline;
-    text-transform: uppercase;
-  }
-  
-  .attack .value, .features .value, .proficients .value {
-    text-align: center;
-    letter-spacing: 0.1em;
-  }
-  
-  .personalization-traits-title, .personalization-ideals-title, 
-  .personalization-bonds-title, .personalization-flaws-title {
+
+ /* Секция Характеристики персонажа  */
+  .personalization-traits-title,
+  .personalization-ideals-title,
+  .personalization-bonds-title,
+  .personalization-flaws-title {
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
     text-decoration-line: underline;
   }
-  
+
   .personalization .value {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     text-align: center;
   }
-  
-  .money-cp, .money-sp, .money-ep, .money-gp, 
+
+/* Секция Инвентарь */
+  .money-cp,
+  .money-sp,
+  .money-ep,
+  .money-gp,
   .money-pp {
     font-style: italic;
     font-size: 14px;
@@ -396,9 +787,9 @@
     text-decoration-line: underline;
     color: var(--green-text-color);
   }
-  
+
   .equipment-money .value {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     line-height: 1.25;
     text-align: center;
@@ -406,7 +797,3 @@
     color: var(--green-text-color);
   }
 
-  /* body{
-    margin-left: auto;
-    margin-right: auto;
-  } */

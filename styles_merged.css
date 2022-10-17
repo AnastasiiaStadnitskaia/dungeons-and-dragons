@@ -38,7 +38,6 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
 }
-/* РАСКОММЕНТИРОВАТЬ НА ФИНИШЕ!!!!!!! */
 .container-bcg {
   margin-left: auto;
   margin-right: auto;
@@ -87,6 +86,20 @@ body {
     letter-spacing: 0.1em;
     color: var(--title-text-color);
   }
+<<<<<<< HEAD
+=======
+  .character-name {
+    background-image: url("/img/svitok.png");
+    background-size: 320px 100px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 320px;
+    height: 100px;
+    margin-top: 108px;
+    margin-left: 28px;
+    margin-right: 8px;
+  }
+>>>>>>> 0d08f6fc3211c1d5ca78fbd4e0e662dd0cd133d3
   .character-name .value {
     padding: 24px 40px 36px 40px;
   }
@@ -141,6 +154,7 @@ body {
     margin-top: 6px;
     margin-left: 24px;
     display: flex;
+<<<<<<< HEAD
   }
 /* СЕКЦИЯ ХАРАКТЕРИСТИК */
   /* Заголовки характеристик */
@@ -175,6 +189,38 @@ body {
     align-content: center;
     align-items: center;
   }
+=======
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    width: 856px;
+    height: 224px;
+    padding-top: 12px;
+  }
+  .character-block .value {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 264px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+  .ch-class-title, .ch-background-title,
+  .ch-player-title, .ch-race-title, 
+  .ch-alignment-title, .ch-experience-title {
+    margin-top: 8px;
+  }
+  /* СЕКЦИЯ ХАРАКТЕРИСТИК */
+  
+  /* Заголовки характеристик */
+  .characteristics-strength-title, 
+  .charactericstics-title, 
+  .charactericstics-title,
+  .charactericstics-title,
+  .charactericstics-title,
+>>>>>>> 0d08f6fc3211c1d5ca78fbd4e0e662dd0cd133d3
   .charactericstics-title {
     font-size: 14px;
     line-height: 1.15;
@@ -206,6 +252,7 @@ body {
     font-size: 18px;
     line-height: 1.2;
     color: var(--green-text-color);
+<<<<<<< HEAD
     width: 48px;
     height: 36px;
     background: rgba(217, 217, 217, 0.25);
@@ -267,6 +314,28 @@ body {
   .proficiency-bonus-tittle {
     font-family: "Raleway", sans-serif;
     line-height: 1.12;
+=======
+  }
+
+  .characteristics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* margin-left: 28px;
+    margin-top: 8px; */
+    width: 168px;
+    height: 1040px;
+  }
+  /* .characteristics .list-item {
+
+  } */
+
+
+  /* СЕКЦИЯ ВДОХНОВЕНИЕ И БОНУС МАСТЕРСТВА */
+  .inspiration-title, .proficiency-bonus-tittle {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.13;
+>>>>>>> 0d08f6fc3211c1d5ca78fbd4e0e662dd0cd133d3
     text-decoration-line: underline;
     text-align: center;
     color: var(--green-text-color);

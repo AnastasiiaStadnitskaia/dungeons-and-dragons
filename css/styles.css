@@ -38,7 +38,6 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
 }
-/* РАСКОММЕНТИРОВАТЬ НА ФИНИШЕ!!!!!!! */
 .container-bcg {
   margin-left: auto;
   margin-right: auto;
@@ -125,12 +124,9 @@ body {
     text-align: center;
     color: var(--title-text-color);
   }
-  .ch-class-title,
-  .ch-background-title,
-  .ch-player-title,
-  .ch-race-title,
-  .ch-alignment-title,
-  .ch-experience-title {
+  .ch-class-title, .ch-background-title,
+  .ch-player-title, .ch-race-title,
+  .ch-alignment-title, .ch-experience-title {
     margin-top: 8px;
   }
 /* Большой блок из 3 частей */
@@ -148,7 +144,6 @@ body {
     background-image: url("/img/characteristics-frame.svg");
     background-size: 168px 1030px;
     background-repeat: no-repeat;
-    /* top: 208px; */
     width: 168px;
     height: 1030px;
     display: flex;
@@ -285,8 +280,7 @@ body {
     border-radius: 4px;
   }
     /* Секция Спасброски */
-    .saving-throws-title,
-    .skills-title {
+    .saving-throws-title, .skills-title {
       font-size: 14px;
       line-height: 1.14;
       text-decoration-line: underline;
@@ -326,7 +320,6 @@ body {
       flex-direction: column-reverse;
       justify-content: center;
       gap: 12px;
-      /* margin-bottom: 20px; */
       align-content: center;
     }
     .saving-throws-list {
@@ -681,9 +674,6 @@ body {
     gap: 8px;
     margin-bottom: 4px;
   }
-  /* ..success-list{
-    gap: 8px;
-  } */
   .success-markers, .failure-markers{
     width: 68px;
     height: 20px;
@@ -698,7 +688,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     /* padding-left: 11px; */
     margin-bottom: 6px;
   }
@@ -765,7 +754,6 @@ body {
     text-align: center;
     text-decoration-line: underline;
   }
-
   .personalization .value {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -775,10 +763,8 @@ body {
   }
 
 /* Секция Инвентарь */
-  .money-cp,
-  .money-sp,
-  .money-ep,
-  .money-gp,
+  .money-cp, .money-sp,
+  .money-ep, .money-gp,
   .money-pp {
     font-style: italic;
     font-size: 14px;
